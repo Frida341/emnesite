@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
-
-    <title>Frida's Opskrifter</title>
+    <title>Avocadomad</title>
 </head>
 
 <body>
@@ -31,7 +30,7 @@
                 <li><a href="#kontaktinfo">Kontaktinfo</a></li>
             </ul>
 
-            <button class="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="main-menu">
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -40,58 +39,63 @@
     </header>
 
     <main>
-        <section class="side-et">
-            <div class="hej">
-                <h1>Velkommen!</h1>
-                <h2>Hvad har du lyst til at spise i dag?</h2>
-            </div>
-            <div class="knapper-1">
-                <a class="knap" href="vegetar-valg.html"> Vegetar Opskrifter 🥦</a>
-                <a class="knap" href="pescetar-valg.html"> Pescetar Opskrifter 🐟</a>
-                <a class="knap" href="koed-valg.html"> Opskrifter med kød 🥩</a>
-            </div>
-        </section>
-
-        <section class="frida">
+        <section class="op">
             <div class="billede">
-                <img src="imgs/frida.webp" alt="Frida der sidder ved bord">
+                <img src="imgs/avocadomad.webp" alt="Avocadomad">
             </div>
+
+            <div class="h1">
+                <h1>Avocadomad</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min.webp" alt="Minut-viser">
+            </div>
+
             <div>
-                <h2>Lidt om mig</h2>
-                <p>Hej!
-                    Jeg heddder Frida og jeg er 21 år gammel. Siden jeg var helt lille har jeg ELSKET at stå i
-                    køkkenet
-                    med
-                    min far og lave mad. Siden da har jeg udviklet nogle opskrifter som jeg gang på gang laver til
-                    gæster og
-                    mig selv. Efter meget efterspørgsel har jeg valgt at lave en hjemmeside hvor alle mine
-                    opskrifter er
-                    samlet.
-                    Alle opskrifterne er lavet med hjertet </p>
+                <button id="fryser">Ikke fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="1" min="1" step="1">
+
+                    <ul id="ingredientList">
+                        <li data-base="2">2 stykker lyst brød</li>
+                        <li data-base="1">1 avocado</li>
+                        <li data-base="1">1 lime</li>
+                        <li data-base="1">1 håndfuld koriander</li>
+                        <li>Salt og peber</li>
+                        <li>Chiliflager</li>
+                    </ul>
+                </div>
+
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+                    <ul>
+                        <li><label><input type="checkbox"> Rist brødet i brødristeren og skær avocadoen i
+                                skiver.</label></li>
+                        <li><label><input type="checkbox"> Mas avocadoen ud på brødet og tilføj limesaft, chiliflager,
+                                salt, peber og koriander.</label></li>
+
+                    </ul>
+                </div>
+
             </div>
         </section>
-        <div class="opskrift">
-            <div class="billede">
-                <a href="o-mosterdortes.html">
-                    <img src="imgs/moster-dortes.webp" alt="Billede af ret - Moster Dorte's">
-                </a>
-            </div>
-
-            <div class="text">
-                <p>En af mine yndlingsretter hedder Moster Dorte's.
-                    Det en ret der har været i familien i mange år og jeg laver den mindst 2 gange om ugen. Du kan
-                    finde
-                    den under vegetar på 20 min eller tryk på knappen!</p>
-
-                <a href="o-mosterdortes.html" class="link-knap">
-                    <span>Moster Dorte's</span>
-                    <span class="pil">➶</span>
-                </a>
-
-            </div>
-        </div>
     </main>
-
     <footer id="kontaktinfo" class="footer">
         <div class="footer-inner">
             <div class="footer-logo">
@@ -109,7 +113,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="menu.js"></script>
 </body>

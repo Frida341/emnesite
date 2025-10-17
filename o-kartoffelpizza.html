@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
+    <title>Kartoffelpizza</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="imgs/logo.webp" alt="Fridas logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="alleopskrifter.html">Alle Opskrifter</a></li>
+                <li><a href="#kontaktinfo">Kontaktinfo</a></li>
+            </ul>
+
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="op">
+            <div class="billede">
+                <img src="imgs/pizza-k.webp" alt="Kartoffelpizza">
+            </div>
+
+            <div class="h1">
+                <h1>Kartoffelpizza</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min-40.webp" alt="Minut-viser">
+            </div>
+
+            <div>
+                <button id="fryser">Fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="2" min="1" step="1">
+
+                    <ul id="ingredientList">
+
+                        <li data-base="1">1 pakke pizzadej</li>
+                        <li data-base="50">50g passata</li>
+                        <li data-base="1">1 tsk timian</li>
+                        <li data-base="1">1 tsk oregano</li>
+                        <li data-base="1">1 klump frisk mozzarella</li>
+                        <li data-base="1">1 bagekartoffel</li>
+                        <li data-base="0.5">1/2 rødløg</li>
+                        <li data-base="1">1 spsk olivenolie</li>
+                        <li>Salt og peber</li>
+
+
+                    </ul>
+                </div>
+
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+                    <ul>
+                        <li><label><input type="checkbox"> Tænd ovnen på 200 grader og lad din bageplade varme derinde
+                                imens du laver pizzaen.</label></li>
+                        <li><label><input type="checkbox"> Hæld lidt olivenolie, passataen og krydderierne i en gryde og
+                                lad det simre i 5 min.</label></li>
+                        <li><label><input type="checkbox"> Skær din kartoffel i tynde skiver og steg dem på en pande med
+                                olivenolie indtil de er gyldne.</label></li>
+                        <li><label><input type="checkbox"> Fold din dej ud og smør pizzasaucen ud.</label></li>
+                        <li><label><input type="checkbox"> Riv mozzarellaen og put det på pizzaen sammen med
+                                kartoffelskiver
+                                og løg i skriver.</label></li>
+                        <li><label><input type="checkbox"> Sæt pizzaen i ovnen i ca. 8-10 min og tag den ud når den er
+                                gylden.</label></li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+    <footer id="kontaktinfo" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="imgs/logo.webp" alt="logo">
+            </div>
+
+            <div class="kontakt">
+                <h3>Kontakt mig her</h3>
+                <ul>
+                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
+                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
+                            frida.thrane</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
+    <title>Moster Dorte's</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="imgs/logo.webp" alt="Fridas logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="alleopskrifter.html">Alle Opskrifter</a></li>
+                <li><a href="#kontaktinfo">Kontaktinfo</a></li>
+            </ul>
+
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="op">
+            <div class="billede">
+                <img src="imgs/moster-d.webp" alt="moster dorte's">
+            </div>
+
+            <div class="h1">
+                <h1>Moster Dorte's</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min.webp" alt="Minut-viser">
+            </div>
+
+            <div>
+                <button id="fryser">Ikke fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="2" min="1" step="1">
+
+                    <ul id="ingredientList">
+
+                        <li data-base="500">500g spaghetti</li>
+                        <li>En MASSE olivenolie (følg hjertet)</li>
+                        <li>Parmesan</li>
+                        <li data-base="2">2 fed hvidløg</li>
+                        <li>Salt og peber</li>
+                        <li data-base="1">1 dåse passata</li>
+                        <li data-base="1">1 burrata</li>
+
+                    </ul>
+                </div>
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+                    <ul>
+                        <li><label><input type="checkbox"> Start med at hæl en masse olivenolie og dit hakket fed
+                                hvidløg på en pande.</label></li>
+                        <li><label><input type="checkbox"> Når det har fået ca.
+                                3 min tilføjer du passata, skurer ned for varmen og giver det ca. 30 min (eller mere)
+                                med låg
+                                på.</label></li>
+                        <li><label><input type="checkbox"> Tilføj salt og peber og rør et par gange undervejs.</label>
+                        </li>
+                        <li><label><input type="checkbox"> Kog pastaen og bland det hele sammen.</label></li>
+                        <li><label><input type="checkbox"> Tilføj gerne parmesanost og burrata.</label></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontaktinfo" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="imgs/logo.webp" alt="logo">
+            </div>
+
+            <div class="kontakt">
+                <h3>Kontakt mig her</h3>
+                <ul>
+                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
+                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
+                            frida.thrane</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

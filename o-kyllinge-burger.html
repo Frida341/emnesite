@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
+    <title>kylling burger</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="imgs/logo.webp" alt="Fridas logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="alleopskrifter.html">Alle Opskrifter</a></li>
+                <li><a href="#kontaktinfo">Kontaktinfo</a></li>
+            </ul>
+
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="op">
+            <div class="billede">
+                <img src="imgs/burger.webp" alt="kylling burger">
+            </div>
+
+            <div class="h1">
+                <h1>Kylling burger med crispy kartofler</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min-40.webp" alt="Minut-viser">
+            </div>
+
+            <div>
+                <button id="fryser">Ikke fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="2" min="1" step="1">
+
+                    <ul id="ingredientList">
+
+                        <li data-base="200">200g kyllinge bryst</li>
+                        <li data-base="1">1 spsk hvedemel</li>
+                        <li data-base="2">2 æg</li>
+                        <li data-base="100">100g pankorasp</li>
+                        <li>Olivenolie</li>
+                        <li>Salt og peber</li>
+                        <li data-base="100">100g mayo</li>
+                        <li data-base="100">100g frisk persille</li>
+                        <li data-base="2">2 burgerboller</li>
+                        <li data-base="3">3 fed hvidløg</li>
+                        <li data-base="1">1 tsk timian</li>
+                        <li data-base="300">300g kartofler</li>
+
+
+                    </ul>
+                </div>
+
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+
+                    <ul>
+                        <li><label><input type="checkbox"> Skær kartoflerne i mellemstore tern og kog dem i 11-12
+                                minutter.</label></li>
+                        <li><label><input type="checkbox"> Når de er kogte, skal vandet siges fra.</label></li>
+                        <li><label><input type="checkbox"> Læg låg på gryden og og ryst kartoflerne så de bliver
+                                lidt
+                                fluffy (det er det er gør den crispy).</label></li>
+                        <li><label><input type="checkbox"> Læg dem i ovnen med olivenolie, salt, timian og
+                                peber.</label></li>
+                        <li><label><input type="checkbox"> Giv dem Ca. 40 min på 200g. Rør i dem undervejs.</label>
+                        </li>
+                        <li><label><input type="checkbox"> Bank kyllingen lidt flad og pisk æg sammen i en skål.</label>
+                        </li>
+                        <li><label><input type="checkbox"> Placer æg, hvedemel og pankorasp i tre forskellige
+                                skåle.</label></li>
+                        <li><label><input type="checkbox"> Vend først kyllingen i hvedemel så æg og derefter
+                                rasp.</label></li>
+                        <li><label><input type="checkbox"> Læg dem på en pande med lidt olivenolie og giv dem ca. 5
+                                minutter på hver side.</label></li>
+                        <li><label><input type="checkbox"> Bland hakket persille, salt, peber og mayo sammen i en
+                                skål.</label></li>
+                        <li><label><input type="checkbox"> Rist bollerne på panden til de er gyldne.</label></li>
+                        <li><label><input type="checkbox"> Saml til sidst burgeren.</label></li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer id="kontaktinfo" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="imgs/logo.webp" alt="logo">
+            </div>
+
+            <div class="kontakt">
+                <h3>Kontakt mig her</h3>
+                <ul>
+                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
+                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
+                            frida.thrane</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

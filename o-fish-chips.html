@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
+    <title>Fish and chips</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="imgs/logo.webp" alt="Fridas logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="alleopskrifter.html">Alle Opskrifter</a></li>
+                <li><a href="#kontaktinfo">Kontaktinfo</a></li>
+            </ul>
+
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="op">
+            <div class="billede">
+                <img src="imgs/fish.webp" alt="fish and chips">
+            </div>
+
+            <div class="h1">
+                <h1>Fish and Chips</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min-1.webp" alt="Minut-viser">
+            </div>
+
+            <div>
+                <button id="fryser">Fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="2" min="1" step="1">
+
+                    <ul id="ingredientList">
+                        <li data-base="2">2 torsk eller kuller filet</li>
+                        <li data-base="250">250 ml øl</li>
+                        <li data-base="200">200g hvedemel</li>
+                        <li data-base="0.5">1/2 tsk bagepulver</li>
+                        <li>Fritureolie</li>
+                        <li data-base="400">400g kartofler</li>
+                        <li data-base="0.5">1/2 tsk timian</li>
+                        <li>Olivenolie</li>
+                        <li>Salt og peber</li>
+                        <li data-base="6">6 spsk mayo</li>
+                        <li data-base="6">6 spsk cremefraiche</li>
+                        <li data-base="1">1 spsk kapers</li>
+                        <li data-base="4">4 cornichoner</li>
+                        <li data-base="2">2 spsk citronsaft</li>
+                        <li data-base="1">1 håndhuld persille</li>
+                        <li data-base="1">1 håndhuld dild</li>
+                        <li data-base="2">2 tsk sennep</li>
+
+
+                    </ul>
+                </div>
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+                    <h3>Chips</h3>
+                    <ul>
+                        <li><label><input type="checkbox"> Skær kartoflerne i både og hæld olivenolie, salt, peber og
+                                timian på.</label></li>
+                        <li><label><input type="checkbox"> Bag dem i ca. 45 min på
+                                180 grader </label></li>
+                    </ul>
+                    <h3>Tartare sauce</h3>
+                    <ul>
+                        <li><label><input type="checkbox"> Hak cornichoner, kapers, persille og dild. </label></li>
+                        <li><label><input type="checkbox"> Bland mayo, cremefraiche, kapers, cornichoner,
+                                citronsaft, persille, dild og sennep sammen i en skål og stil det
+                                i køleskabet. </label></li>
+                    </ul>
+                    <h3>Fish</h3>
+                    <ul>
+                        <li><label><input type="checkbox"> Bland mel, bagepulver, salt og peber sammen i en skål og
+                                tilføj derefter øl.</label></li>
+                        <li><label><input type="checkbox"> Skær fisken i små
+                                stykker og dup dem tørre. </label></li>
+                        <li><label><input type="checkbox"> Varm olien op, den er klar når man kan dyppe en trægrydeske i
+                                og der kommer bobler omkring. </label></li>
+                        <li><label><input type="checkbox"> Vend fisken i dejen og steg dem i oliven til de er gyldne og
+                                sprøde, lad dem dryppe af på noget
+                                køkkenrul.</label></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer id="kontaktinfo" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="imgs/logo.webp" alt="logo">
+            </div>
+
+            <div class="kontakt">
+                <h3>Kontakt mig her</h3>
+                <ul>
+                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
+                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
+                            frida.thrane</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

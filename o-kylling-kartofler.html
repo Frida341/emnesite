@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io-kopi/favicon-32x32.png">
+    <title>Kylling med kartofler</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="imgs/logo.webp" alt="Fridas logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="alleopskrifter.html">Alle Opskrifter</a></li>
+                <li><a href="#kontaktinfo">Kontaktinfo</a></li>
+            </ul>
+
+            <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="op">
+            <div class="billede">
+                <img src="imgs/kylling-kartofler.webp" alt="kylling med kartofler">
+            </div>
+
+            <div class="h1">
+                <h1>Kylling med kartofler</h1>
+            </div>
+            <div class="min">
+                <img src="imgs/min-1.webp" alt="Minut-viser">
+            </div>
+
+            <div>
+                <button id="fryser">Fryser venlig</button>
+            </div>
+
+            <div>
+                <button id="printRecipe" class="link-knap">Print opskrift</button>
+
+            </div>
+
+            <button id="kitchenBtn">Hold min skærm tændt</button>
+            <script src="https://unpkg.com/nosleep.js@latest/dist/NoSleep.min.js"></script>
+
+
+            <div class="ingredienser">
+                <div>
+                    <h2>Ingredienser</h2>
+
+                    <label for="portionInput">Portioner:</label>
+                    <input type="number" id="portionInput" value="2" min="1" step="1">
+
+                    <ul id="ingredientList">
+
+                        <li data-base="4">4 kyllinge overlår</li>
+                        <li data-base="400">400g kartofler</li>
+                        <li data-base="3">3 fed hvidløg</li>
+                        <li data-base="1">1 løg</li>
+                        <li>Olivenolie</li>
+                        <li>Tørret timian</li>
+                        <li>Salt og peber</li>
+                        <li data-base="1">1 agurk</li>
+                        <li data-base="1">1 avocado</li>
+                        <li data-base="100">100g tomater</li>
+                        <li data-base="100">100g feta</li>
+
+
+                    </ul>
+                </div>
+
+
+                <div class="instrukser">
+                    <h2>Instrukser</h2>
+                    <ul>
+                        <li><label><input type="checkbox"> Put salt, peber og timian oven på din kylling og læg
+                                kyllingen i en bradepande.</label></li>
+                        <li><label><input type="checkbox"> Skær kartoflerne i både og læg dem ved siden af kyllingen.
+                                Tilføj også olivenolie, salt, peber
+                                og timian til kartoflerne.</label></li>
+                        <li><label><input type="checkbox"> Læg hvidløg på bradepanden og bag det hele i 45 min på 180
+                                grader.</label></li>
+                        <li><label><input type="checkbox"> Skru eventuelt op for varmen hvis kyllingen har brug for mere
+                                efter de 45 min.</label></li>
+                        <li><label><input type="checkbox"> Når kylling og kartofler er færdige, kan du anrette det på en
+                                tallerken.</label></li>
+                        <li><label><input type="checkbox"> Hvidløgene kan sagtens
+                                spises og giver dejlig smag.</label></li>
+                        <li><label><input type="checkbox"> Skær agurk, avocado, tomater og feta i små stykker og saml
+                                det i en skål med lidt olivenolie,
+                                salt, peber og timian</label></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer id="kontaktinfo" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="imgs/logo.webp" alt="logo">
+            </div>
+
+            <div class="kontakt">
+                <h3>Kontakt mig her</h3>
+                <ul>
+                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
+                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
+                            frida.thrane</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+
+</html>
