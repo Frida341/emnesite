@@ -193,10 +193,97 @@ document.addEventListener("DOMContentLoaded", () => {
   portionInput.addEventListener("input", renderIngredients);
 });
 
-/* === PRINT BUTTON === */
-document.getElementById("printRecipe")?.addEventListener("click", () => {
-  window.print();
-});
+/* === PRINT + TEL-FIX + FOOTER Z-INDEX FIX === */
+(function () {
+  // Kører ved DOMContentLoaded så elementer er tilgængelige
+  document.addEventListener("DOMContentLoaded", () => {
+    /* ---------- PRINT (prøv window.print() først, fallback til ny fane) ---------- */
+    const printBtn = document.getElementById("printRecipe");
+
+    function openPrintable(selector) {
+      const content = document.querySelector(selector);
+      if (!content) {
+        alert("Opskrift ikke fundet til print.");
+        return;
+      }
+      const w = window.open("", "_blank", "noopener,noreferrer");
+      if (!w) {
+        alert(
+          "Kunne ikke åbne print-vindue (popup blokeret). Prøv at tillade popups eller brug desktop."
+        );
+        return;
+      }
+      const html = `<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Print - Opskrift</title>
+<style>
+  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding:16px;color:#000;background:#fff}
+  img{max-width:100%;height:auto;display:block;margin-bottom:12px}
+  @media print{ body{margin:0.5cm} }
+</style>
+</head>
+<body>
+<main>${content.innerHTML}</main>
+<script>window.onload=function(){ try{ window.print(); }catch(e){ console.warn(e); } }<\/script>
+</body>
+</html>`;
+      w.document.open();
+      w.document.write(html);
+      w.document.close();
+    }
+
+    if (printBtn) {
+      printBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        try {
+          window.print();
+          // Hvis du altid vil bruge fallback i stedet for window.print(), uncomment næste linje:
+          // openPrintable('.opskrift');
+        } catch (err) {
+          console.warn("window.print fejlede, bruger fallback:", err);
+          openPrintable(".opskrift");
+        }
+      });
+    }
+
+    /* ---------- FIX tel: LINKS (hvis utilsigtet tekst i href) ---------- */
+    document.querySelectorAll("a[href]").forEach((a) => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+      if (/^tel:/i.test(href) && /[A-Za-z]/.test(href)) {
+        const visible = (a.textContent || "").trim();
+        const digits = visible.replace(/[^\d+]/g, "");
+        if (digits) a.setAttribute("href", `tel:${digits}`);
+      }
+    });
+
+    const footerTel = document.querySelector("#kontaktinfo a[href*='tel']");
+    if (footerTel) {
+      const h = footerTel.getAttribute("href");
+      if (/[A-Za-z]/.test(h)) {
+        const txt = (footerTel.textContent || "").replace(/[^\d+]/g, "");
+        if (txt) footerTel.setAttribute("href", `tel:${txt}`);
+      }
+    }
+
+    /* ---------- SIKKERHED FOR FOOTER-CLICK: undgå overlays der blokerer footer ---------- */
+    const footer = document.getElementById("kontaktinfo");
+    if (footer) {
+      const currentZ = window.getComputedStyle(footer).zIndex;
+      if (!currentZ || currentZ === "auto" || Number(currentZ) < 20) {
+        footer.style.position = "relative";
+        footer.style.zIndex = "60";
+      }
+      footer.style.pointerEvents = "auto";
+    }
+
+    if (!printBtn) console.info("Info: #printRecipe findes ikke i DOM.");
+    if (!footer) console.info("Info: #kontaktinfo findes ikke i DOM.");
+  });
+})();
 
 /* === SEARCH FUNCTION (FIX: vælg titel-ankeret, ikke billede-ankeret) === */
 (function () {
