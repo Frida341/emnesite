@@ -11,38 +11,6 @@ body {
   padding: 20px;
 }
 
-.breadcrumb {
-  font-family: "Life Savers", sans-serif;
-  font-size: 0.95rem;
-  margin: 15px 20px;
-  color: #b81c1c;
-}
-
-.breadcrumb ol {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 0;
-  margin: 0;
-  color: #b81c1c;
-}
-
-.breadcrumb li + li::before {
-  content: "›";
-  color: #b81c1c;
-  margin: 0 5px;
-}
-
-.breadcrumb a {
-  color: #b81c1c;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
 h1 {
   text-align: center;
   padding-top: 20px;
@@ -452,6 +420,23 @@ nav.active .menu {
   font-size: 20px;
   text-align: center;
   margin-bottom: 6px;
+}
+
+#siteSearch-alle {
+  display: block;
+  border: 2px solid #f8f8f8;
+  background-color: #f8f8f8;
+  width: 100%;
+  max-width: 420px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-family: "Life Savers", serif;
+  color: #b81c1c;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 18px;
+  text-align: center;
+  margin: 0 auto 18px auto;
 }
 
 #siteSearch-veg {
