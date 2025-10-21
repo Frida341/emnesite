@@ -198,14 +198,10 @@ document.getElementById("printRecipe")?.addEventListener("click", () => {
   window.print();
 });
 
-/* === SEARCH FUNCTION (FIX: vælg titel-ankeret, ikke billede-ankeret) === */
 (function () {
-  const input = document.getElementById("siteSearch");
-  if (!input) return;
-
-  const container = document.querySelector(".grid-a");
-  if (!container) return;
-  const recipes = container.querySelectorAll(".opskrift");
+  // vælg alle søge-inputs ved klasse (bedre end id)
+  const inputs = document.querySelectorAll("input.siteSearch");
+  if (!inputs.length) return;
 
   function normalizeText(str) {
     return str
@@ -216,37 +212,37 @@ document.getElementById("printRecipe")?.addEventListener("click", () => {
       : "";
   }
 
-  input.addEventListener("input", () => {
-    const q = normalizeText(input.value.trim());
+  inputs.forEach((input) => {
+    // find grid inden for samme sektion
+    const section = input.closest(".recipes-section") || input.parentElement;
+    const container = section ? section.querySelector(".grid-a") : null;
+    if (!container) return;
 
-    recipes.forEach((r) => {
-      // hent alle <a> i .opskrift og vælg det sidste (titlen)
-      const anchors = r.querySelectorAll("a");
-      let titleEl = null;
+    const recipes = container.querySelectorAll(".opskrift");
 
-      if (anchors.length === 1) {
-        titleEl = anchors[0];
-      } else if (anchors.length > 1) {
-        // normalt er billedet først og titlen sidst i din markup
-        titleEl = anchors[anchors.length - 1];
-      }
+    input.addEventListener("input", () => {
+      const q = normalizeText(input.value.trim());
+      recipes.forEach((r) => {
+        const anchors = r.querySelectorAll("a");
+        let titleEl = null;
 
-      // fallback: hvis der er et element med synlig tekst (fx et .recipe-title eller h3), brug det
-      if (!titleEl) {
-        titleEl =
-          r.querySelector("[data-title]") ||
-          r.querySelector(".recipe-title") ||
-          r.querySelector("h3") ||
-          r;
-      }
+        if (anchors.length === 1) {
+          titleEl = anchors[0];
+        } else if (anchors.length > 1) {
+          titleEl = anchors[anchors.length - 1];
+        }
 
-      const title = normalizeText(titleEl ? titleEl.textContent : "");
+        if (!titleEl) {
+          titleEl =
+            r.querySelector("[data-title]") ||
+            r.querySelector(".recipe-title") ||
+            r.querySelector("h3") ||
+            r;
+        }
 
-      if (title.includes(q) || q === "") {
-        r.style.display = "";
-      } else {
-        r.style.display = "none";
-      }
+        const title = normalizeText(titleEl ? titleEl.textContent : "");
+        r.style.display = title.includes(q) || q === "" ? "" : "none";
+      });
     });
   });
 })();
@@ -400,3 +396,24 @@ document
     }
   });
 })();
+
+const breadcrumbList = document.getElementById("breadcrumbList");
+
+function createLi(name, href) {
+  const li = document.createElement("li");
+  if (href) li.innerHTML = `<a href="${href}">${name}</a>`;
+  else li.textContent = name;
+  return li;
+}
+
+breadcrumbList.appendChild(createLi("Forside", "index.html"));
+
+const bodyCrumbs = document.body.getAttribute("data-breadcrumb");
+if (bodyCrumbs) {
+  const parts = bodyCrumbs.split(">").map((s) => s.trim());
+  for (let i = 1; i < parts.length; i++) {
+    const name = parts[i];
+    const isLast = i === parts.length - 1;
+    breadcrumbList.appendChild(createLi(name, isLast ? null : "#"));
+  }
+}

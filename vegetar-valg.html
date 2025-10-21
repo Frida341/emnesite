@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="Find nemme og lækre opskrifter – både vegetariske, pescetariske og med kød. Hjemmelavet mad med kærlighed og smag.">
+
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +41,10 @@
         </nav>
     </header>
 
+    <nav class="breadcrumb" aria-label="Brødkrummesti">
+        <ol id="breadcrumbList"></ol>
+    </nav>
+
     <main>
         <div class="knapper">
             <a class="knap" href="vegetar-tyve-min.html"> Klar på 20 min</a>
@@ -45,6 +52,99 @@
             <a class="knap" href="vegetar-40-min.html"> Klar på 40 min</a>
             <a class="knap" href="vegetar-avanceret.html"> Avanceret</a>
         </div>
+
+        <section class="recipes-section">
+            <div class="h1-ret">
+                <h1>Alle vegetar opskrifter</h1>
+            </div>
+            <div class="search-wrapper">
+                <label for="siteSearch-veg" class="search-label">Søg opskrifter:</label>
+                <input id="siteSearch-veg" class="siteSearch" type="search" placeholder="Søg efter opskrift">
+            </div>
+
+            <div class="grid-a">
+
+                <div class="opskrift">
+                    <a href="o-and.html">
+                        <img src="imgs/and.webp" alt="and">
+                    </a>
+                    <a href="o-and.html">"And"</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-avocadomad.html">
+                        <img src="imgs/avocadomad.webp" alt="Avocadomad">
+                    </a>
+                    <a href="o-avocadomad.html">Avocadomad</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-citron-pasta.html">
+                        <img src="imgs/citronpasta.webp" alt="Citron pasta">
+                    </a>
+                    <a href="o-citron-pasta.html">Citron pasta</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-feta-pasta.html">
+                        <img src="imgs/feta-pasta.webp" alt="Feta pasta">
+                    </a>
+                    <a href="o-feta-pasta.html">Feta pasta</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-risotto.html">
+                        <img src="imgs/risotto.webp" alt="Risotto">
+                    </a>
+                    <a href="o-risotto.html">Risotto med persille og porre</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-græsk-salat.html">
+                        <img src="imgs/grask-salat.webp" alt="Græsk kartoffelsalat">
+                    </a>
+                    <a href="o-græsk-salat.html">Græsk kartoffelsalat</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-gyoza-agurk.html">
+                        <img src="imgs/gyoza.webp" alt="Gyoza med agurkesalat">
+                    </a>
+                    <a href="o-gyoza-agurk.html">Gyoza med agurkesalat</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-kartoffelmad.html">
+                        <img src="imgs/kartoffelmad.webp" alt="Kartoffelmad">
+                    </a>
+                    <a href="o-kartoffelmad.html">Kartoffelmad</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-kartoffelpizza.html">
+                        <img src="imgs/pizza-k.webp" alt="Kartoffelpizza">
+                    </a>
+                    <a href="o-kartoffelpizza.html">Kartoffelpizza</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-mosterdortes.html">
+                        <img src="imgs/moster-dortes.webp" alt="Moster Dorte's">
+                    </a>
+                    <a href="o-mosterdortes.html">Moster Dorte's</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-nachos.html">
+                        <img src="imgs/nachos.webp" alt="Nachos">
+                    </a>
+                    <a href="o-nachos.html">Nachos</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-toast.html">
+                        <img src="imgs/toast-k.webp" alt="Toast">
+                    </a>
+                    <a href="o-toast.html">Toast</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-peberfrugtpasta.html">
+                        <img src="imgs/peberfrugt.webp" alt="Peberfrugtpasta">
+                    </a>
+                    <a href="o-peberfrugtpasta.html">Peberfrugtpasta</a>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer id="kontaktinfo" class="footer">
         <div class="footer-inner">
@@ -55,8 +155,10 @@
             <div class="kontakt">
                 <h3>Kontakt mig her</h3>
                 <ul>
-                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
-                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <div class="knapper-k">
+                        <div class="knap-k">Tlf. 25149805</div>
+                        <div class="knap-k">Mail - fridathrane25@gmail.com</div>
+                    </div>
                     <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
                             frida.thrane</a></li>
                 </ul>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description"
+        content="Find nemme og lækre opskrifter – både vegetariske, pescetariske og med kød. Hjemmelavet mad med kærlighed og smag.">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +41,10 @@
         </nav>
     </header>
 
+    <nav class="breadcrumb" aria-label="Brødkrummesti">
+        <ol id="breadcrumbList"></ol>
+    </nav>
+
     <main>
         <div class="knapper">
             <a class="knap" href="koed-tyve-min.html"> Klar på 20 min</a>
@@ -45,6 +52,75 @@
             <a class="knap" href="koed-40-min.html"> Klar på 40 min</a>
             <a class="knap" href="koed-avanceret.html"> Avanceret</a>
         </div>
+
+        <section class="recipes-section">
+            <div class="h1-ret">
+                <h1>Alle opskrifter med kød</h1>
+            </div>
+            <div class="search-wrapper">
+                <label for="siteSearch-koed" class="search-label">Søg opskrifter:</label>
+                <input id="siteSearch-koed" class="siteSearch" type="search" placeholder="Søg efter opskrift">
+            </div>
+
+            <div class="grid-a">
+
+                <div class="opskrift">
+                    <a href="o-ramen-steak.html">
+                        <img src="imgs/ramen-steak.webp" alt="Ramen med Steak">
+                    </a>
+                    <a href="o-ramen-steak.html">Ramen med Steak</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-kyllingesuppe.html">
+                        <img src="imgs/kyllingsuppe.webp" alt="kylling suppe">
+                    </a>
+                    <a href="o-kyllingesuppe.html">Kyllingesuppe</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-foccacia-sandwich.html">
+                        <img src="imgs/foccacia.webp" alt="Foccacia sandwich">
+                    </a>
+                    <a href="o-foccacia-sandwich.html">Foccacia sandwich</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-kylling-kartofler.html">
+                        <img src="imgs/kylling-kartofler.webp" alt="Kylling med kartofler">
+                    </a>
+                    <a href="o-kylling-kartofler.html">Kylling med kartofler</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-kyllinge-burger.html">
+                        <img src="imgs/burger.webp" alt="Kylling burger">
+                    </a>
+                    <a href="o-kyllinge-burger.html">Kylling burger med crispy kartofler</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-toast-v.html">
+                        <img src="imgs/toast-v.webp" alt="Toast">
+                    </a>
+                    <a href="o-toast-v.html">Toast</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-pasta-m-kylling.html">
+                        <img src="imgs/pasta-kylling.webp" alt="Pasta med kylling">
+                    </a>
+                    <a href="o-pasta-m-kylling.html">Pasta med kylling</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-salami-pizza.html">
+                        <img src="imgs/s-pizza.webp" alt="Salamipizza">
+                    </a>
+                    <a href="o-salami-pizza.html">Salamipizza</a>
+                </div>
+                <div class="opskrift">
+                    <a href="o-steegt-flaask.html">
+                        <img src="imgs/steagt-fleest.webp" alt="Stægt flæsk">
+                    </a>
+                    <a href="o-steegt-flaask.html">Stægt flæsk</a>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer id="kontaktinfo" class="footer">
         <div class="footer-inner">
@@ -55,8 +131,10 @@
             <div class="kontakt">
                 <h3>Kontakt mig her</h3>
                 <ul>
-                    <li><a href="tel:+45TlfNummer">Tlf. 25149805</a></li>
-                    <li><a href="mailto:fridathrane25@gmail.com">Mail - fridathrane25@gmail.com</a></li>
+                    <div class="knapper-k">
+                        <div class="knap-k">Tlf. 25149805</div>
+                        <div class="knap-k">Mail - fridathrane25@gmail.com</div>
+                    </div>
                     <li><a href="https://www.instagram.com/frida.thrane" target="_blank" rel="noopener">Instagram -
                             frida.thrane</a></li>
                 </ul>
